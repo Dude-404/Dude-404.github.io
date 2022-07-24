@@ -1,0 +1,156 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+body[data-theme="light"] {
+    color: var(--primary);
+    background: url("img/light_bg.svg");
+    background-color: var(--secondary);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body[data-theme="dark"] {
+    color: var(--primary);
+    background: url("img/dark_bg.svg");
+    background-color: var(--secondary);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+::selection {
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+#theme-changer {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+}
+
+#theme-changer[data-theme="dark"] .fa-moon,
+#theme-changer[data-theme="light"] .fa-sun {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.profile {
+    /* margin-top: 7rem; */
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+}
+
+.pfp {
+    margin-bottom: 2rem;
+}
+
+.pfp img {
+    border: 3px solid var(--border);
+    border-radius: 50%;
+}
+
+.pfp img:hover {
+    border: 3px solid greenyellow;
+}
+
+#animated-name {
+    font-weight: 500;
+}
+
+@keyframes blinker {
+    0% {
+        background-color: var(--secondary);
+    }
+
+    50% {
+        background-color: var(--secondary);
+    }
+
+    51% {
+        background-color: var(--primary);
+    }
+}
+
+#animated-name::after {
+    content: "|";
+    background-color: var(--primary);
+    width: 2rem;
+    height: 2rem;
+    color: transparent;
+    margin-left: 1rem;
+    animation: blinker 1s linear infinite;
+}
+
+.about {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+    color: var(--tretary);
+    background-color: var(--secondary);
+}
+
+.discord-link {
+    color: orangered;
+    font-size: 1.8rem;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.footer {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    text-align: right;
+    color: var(--tretary);
+    font-size: 1.7rem;
+    font-family: 'Patrick Hand', cursive;
+}
