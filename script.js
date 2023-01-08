@@ -1,7 +1,7 @@
 const animatedName = document.getElementById("animated-name");
 const themeChanger = document.getElementById("theme-changer");
 
-const tags = ["Rudra", "HexDev", "a GameDev", "a Gamer"];
+const tags = ["Rudra", "Dude404", "a GameDev", "a Gamer"];
 let tagIdx = 0;
 
 function sleep(ms) {
